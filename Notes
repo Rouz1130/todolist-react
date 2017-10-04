@@ -1,0 +1,15 @@
+Building App Structure: Tying up the various visuals with underlying data is where the real work lies.
+Divided up into 5 parts:
+1:Adding something/items
+2:Displaying something/items
+3:Styling
+4:Removing something/items
+5:Animating something/items as they are Created or Deleted.
+
+*: Individually all of these details are easy to wrap our brain around./Keep in mind when we put them together there are a few things to watch for.
+
+1:Adding items:
+-Setting up even 'handlers' and default form handling behavior's. onSubmit ={this.addFoo}. *note if a button exists with the type="submit" we reference the 'onSubmit'
+in our form.
+-Add Event handler like above example
+-Create addItem event handler that gets called once submitted. Do so by adding a constructor below the class declaration. *keywords for constructor with react are 'props' and 'super' and 'ref'.
