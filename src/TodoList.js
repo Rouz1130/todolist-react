@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TodoItems from './TodoItems';
+import './TodoList.css';
 
 
 
@@ -15,8 +16,20 @@ class TodoList extends React.Component {
    };
 
 // we define our addItem even handler
-    this.addItem = this.addItem.bind(this);
-  }
+this.addItem = this.addItem.bind(this);
+this.deleteItem = this.deleteItem.bind(this);
+}
+
+deleteItem(key) {
+var filteredItems = this.state.items.filter(function (item) {
+return (item.key !== key);
+});
+
+this.setState({
+items: filteredItems
+});
+}
+
 
 // addItem method: created var 'itemArray' will store current value of 'items' state object
   addItem(e) {
@@ -57,7 +70,7 @@ class TodoList extends React.Component {
           </form>
         </div>
 {/* specifying our TodoItems Component and pass in our items as a' prop' */}
-        <TodoItems entries={this.state.items}/>
+        <TodoItems entries={this.state.items} delete={this.deleteItem}/>
       </div>
     );
   }

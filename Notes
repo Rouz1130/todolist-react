@@ -13,3 +13,5 @@ Divided up into 5 parts:
 in our form.
 -Add Event handler like above example
 -Create addItem event handler that gets called once submitted. Do so by adding a constructor below the class declaration. *keywords for constructor with react are 'props' and 'super' and 'ref'.
+
+npm i -S react-flip-move: animation plugin
